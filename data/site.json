@@ -1,23 +1,31 @@
 {
-  "id": "noa-fashion",
-  "name": "NOA",
-  "logo": "👗",
-  "tagline": "אופנה נשית שמרגישה טוב",
+  "name": "המרכז לארומטרפיה",
+  "logo": "בדיקה",
+  "tagline": "מכירת שמני אטרים",
   "description": "קולקציית אופנה נשית במחירים הוגנים, משלוח מהיר לכל הארץ",
+  "id": "lihi aroma",
+  "currency": "ILS",
   "lang": "he",
   "dir": "rtl",
   "locale": "he-IL",
-  "currency": "ILS",
+  "checkout": "tranzila",
+  "tranzilaTerminal": "",
+  "secureHandshake": true,
+  "askAddress": false,
+  "shipping": {
+    "price": 30,
+    "freeOver": 300
+  },
   "theme": {
-    "font": "Heebo",
-    "bg": "#faf7f2",
-    "text": "#1f1b16",
-    "muted": "#78716c",
-    "card": "#ffffff",
-    "border": "#e7e0d6",
     "primary": "#1f1b16",
-    "primaryText": "#ffffff",
+    "bg": "#faf7f2",
     "accent": "#b45309",
+    "muted": "#78716c",
+    "border": "#e7e0d6",
+    "text": "#1f1b16",
+    "font": "Heebo",
+    "primaryText": "#ffffff",
+    "card": "#ffffff",
     "radius": "12px",
     "heroBg": "linear-gradient(135deg,#3b2f26,#b45309)"
   },
@@ -29,12 +37,13 @@
   },
   "products": [
     {
-      "name": "שמלת קיץ פרחונית",
-      "price": 189,
       "oldPrice": 249,
+      "color": "#fde8d8",
       "badge": "מבצע",
       "emoji": "👗",
-      "color": "#fde8d8",
+      "price": 189,
+      "name": "שמלת קיץ פרחונית",
+      "description": "שמלה קלילה מכותנה נושמת, אורך מידי, עם כיסים.",
       "category": "שמלות",
       "options": [
         "S",
@@ -42,8 +51,7 @@
         "L",
         "XL"
       ],
-      "optionLabel": "מידה",
-      "description": "שמלה קלילה מכותנה נושמת, אורך מידי, עם כיסים."
+      "optionLabel": "מידה"
     },
     {
       "name": "חולצת פשתן לבנה",
@@ -76,20 +84,20 @@
       "description": "ג'ינס גזרה גבוהה עם גמישות עדינה."
     },
     {
-      "name": "מעיל טרנץ'",
-      "price": 349,
       "oldPrice": 429,
+      "color": "#e9dcc9",
       "badge": "חדש",
       "emoji": "🧥",
-      "color": "#e9dcc9",
+      "price": 349,
+      "name": "מעיל טרנץ'",
+      "description": "מעיל קלאסי עמיד למים קלים, עם חגורה.",
       "category": "מעילים",
       "options": [
         "S",
         "M",
         "L"
       ],
-      "optionLabel": "מידה",
-      "description": "מעיל קלאסי עמיד למים קלים, עם חגורה."
+      "optionLabel": "מידה"
     },
     {
       "name": "תיק צד עור",
@@ -116,12 +124,6 @@
       "description": "סניקרס קלאסיות לכל יום, סוליה נוחה במיוחד."
     }
   ],
-  "shipping": {
-    "price": 30,
-    "freeOver": 300
-  },
-  "checkout": "whatsapp",
-  "askAddress": true,
   "features": [
     {
       "icon": "🚚",
@@ -163,7 +165,5 @@
     "email": "hello@example.com",
     "instagram": "noa.fashion",
     "address": ""
-  },
-  "tranzilaTerminal": "",
-  "secureHandshake": false
+  }
 }
