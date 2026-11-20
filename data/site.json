@@ -108,10 +108,12 @@
       "description": "תיק עור אמיתי עם רצועה מתכווננת ושלושה תאים."
     },
     {
-      "name": "נעלי סניקרס לבנות",
-      "price": 299,
-      "emoji": "👟",
       "color": "#eceae6",
+      "emoji": "👟",
+      "price": 299,
+      "name": "נעלי סניקרס לבנות",
+      "image": "https://www.meadowsaroma.com/media/catalog/product/cache/8e36bc00f44efd67f2a64f3c87c57563/f/r/frankincense-wild-harvest-essential-oil-_meadows-aroma_10ml.jpg",
+      "description": "סניקרס קלאסיות לכל יום, סוליה נוחה במיוחד.",
       "category": "אביזרים",
       "options": [
         "37",
@@ -120,8 +122,7 @@
         "40",
         "41"
       ],
-      "optionLabel": "מידה",
-      "description": "סניקרס קלאסיות לכל יום, סוליה נוחה במיוחד."
+      "optionLabel": "מידה"
     },
     {
       "name": "שמן אטרי",
