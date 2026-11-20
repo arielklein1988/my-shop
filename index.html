@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>החנות שלי</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="app"></div>
+  <noscript>יש להפעיל JavaScript כדי להציג את החנות.</noscript>
+
+  <!-- טופס ש-Netlify מזהה בזמן ההעלאה (נחוץ לשמירת הזמנות). אל תמחקו. -->
+  <form name="order" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="order">
+    <input name="bot-field">
+    <input name="name">
+    <input name="phone">
+    <input name="email">
+    <input name="address">
+    <input name="city">
+    <input name="zip">
+    <textarea name="notes"></textarea>
+    <textarea name="order"></textarea>
+  </form>
+
+  <!-- כל התוכן נטען מ-data/site.json (נערך בפאנל הניהול: /admin) -->
+  <script src="js/app.js"></script>
+</body>
+</html>

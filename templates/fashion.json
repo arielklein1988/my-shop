@@ -1,0 +1,169 @@
+{
+  "id": "noa-fashion",
+  "name": "NOA",
+  "logo": "👗",
+  "tagline": "אופנה נשית שמרגישה טוב",
+  "description": "קולקציית אופנה נשית במחירים הוגנים, משלוח מהיר לכל הארץ",
+  "lang": "he",
+  "dir": "rtl",
+  "locale": "he-IL",
+  "currency": "ILS",
+  "theme": {
+    "font": "Heebo",
+    "bg": "#faf7f2",
+    "text": "#1f1b16",
+    "muted": "#78716c",
+    "card": "#ffffff",
+    "border": "#e7e0d6",
+    "primary": "#1f1b16",
+    "primaryText": "#ffffff",
+    "accent": "#b45309",
+    "radius": "12px",
+    "heroBg": "linear-gradient(135deg,#3b2f26,#b45309)"
+  },
+  "hero": {
+    "title": "הקולקציה החדשה כבר כאן",
+    "subtitle": "בגדים נוחים, גזרות מחמיאות וצבעים שאי אפשר להפסיק ללבוש",
+    "cta": "לקולקציה",
+    "image": ""
+  },
+  "products": [
+    {
+      "name": "שמלת קיץ פרחונית",
+      "price": 189,
+      "oldPrice": 249,
+      "badge": "מבצע",
+      "emoji": "👗",
+      "color": "#fde8d8",
+      "category": "שמלות",
+      "options": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "optionLabel": "מידה",
+      "description": "שמלה קלילה מכותנה נושמת, אורך מידי, עם כיסים."
+    },
+    {
+      "name": "חולצת פשתן לבנה",
+      "price": 119,
+      "emoji": "👚",
+      "color": "#f1ece4",
+      "category": "חולצות",
+      "options": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "optionLabel": "מידה",
+      "description": "חולצת פשתן רכה בגזרה רחבה. מתאימה לכל מזג אוויר."
+    },
+    {
+      "name": "ג'ינס גבוה",
+      "price": 229,
+      "emoji": "👖",
+      "color": "#dbe4ee",
+      "category": "מכנסיים",
+      "options": [
+        "26",
+        "28",
+        "30",
+        "32"
+      ],
+      "optionLabel": "מידה",
+      "description": "ג'ינס גזרה גבוהה עם גמישות עדינה."
+    },
+    {
+      "name": "מעיל טרנץ'",
+      "price": 349,
+      "oldPrice": 429,
+      "badge": "חדש",
+      "emoji": "🧥",
+      "color": "#e9dcc9",
+      "category": "מעילים",
+      "options": [
+        "S",
+        "M",
+        "L"
+      ],
+      "optionLabel": "מידה",
+      "description": "מעיל קלאסי עמיד למים קלים, עם חגורה."
+    },
+    {
+      "name": "תיק צד עור",
+      "price": 259,
+      "emoji": "👜",
+      "color": "#eadbd0",
+      "category": "אביזרים",
+      "description": "תיק עור אמיתי עם רצועה מתכווננת ושלושה תאים."
+    },
+    {
+      "name": "נעלי סניקרס לבנות",
+      "price": 299,
+      "emoji": "👟",
+      "color": "#eceae6",
+      "category": "אביזרים",
+      "options": [
+        "37",
+        "38",
+        "39",
+        "40",
+        "41"
+      ],
+      "optionLabel": "מידה",
+      "description": "סניקרס קלאסיות לכל יום, סוליה נוחה במיוחד."
+    }
+  ],
+  "shipping": {
+    "price": 30,
+    "freeOver": 300
+  },
+  "checkout": "whatsapp",
+  "askAddress": true,
+  "features": [
+    {
+      "icon": "🚚",
+      "title": "משלוח עד הבית",
+      "text": "חינם בקנייה מעל 300 ₪"
+    },
+    {
+      "icon": "↩️",
+      "title": "החלפות והחזרות",
+      "text": "14 יום, בלי שאלות"
+    },
+    {
+      "icon": "💬",
+      "title": "שירות אישי",
+      "text": "עונים בוואטסאפ"
+    }
+  ],
+  "about": {
+    "title": "הסיפור שלנו",
+    "text": "התחלנו מארון קטן וחלום גדול: בגדים איכותיים שלא עולים הון.\nכל פריט נבחר באהבה ונבדק לפני שהוא יוצא אליכן."
+  },
+  "faq": [
+    {
+      "q": "איך מתאימים מידה?",
+      "a": "בכל מוצר מופיעות המידות. אם אתן בין מידות, מומלץ לבחור את הגדולה."
+    },
+    {
+      "q": "כמה זמן לוקח משלוח?",
+      "a": "2-3 ימי עסקים לכל הארץ."
+    },
+    {
+      "q": "איך משלמים?",
+      "a": "אחרי שליחת ההזמנה נחזור אליכן עם קישור לתשלום מאובטח."
+    }
+  ],
+  "contact": {
+    "whatsapp": "972501234567",
+    "phone": "050-1234567",
+    "email": "hello@example.com",
+    "instagram": "noa.fashion",
+    "address": ""
+  },
+  "tranzilaTerminal": "",
+  "secureHandshake": false
+}

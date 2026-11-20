@@ -1,0 +1,99 @@
+{
+  "id": "my-shop",
+  "name": "שם החנות",
+  "logo": "🛍️",
+  "tagline": "משפט קצר שמתאר את העסק",
+  "description": "תיאור קצר של החנות שיופיע בגוגל",
+  "lang": "he",
+  "dir": "rtl",
+  "locale": "he-IL",
+  "currency": "ILS",
+  "theme": {
+    "font": "Heebo",
+    "bg": "#ffffff",
+    "text": "#1d1d1f",
+    "muted": "#6b7280",
+    "card": "#ffffff",
+    "border": "#e5e7eb",
+    "primary": "#111111",
+    "primaryText": "#ffffff",
+    "accent": "#e11d48",
+    "radius": "14px"
+  },
+  "hero": {
+    "title": "כותרת ראשית לחנות",
+    "subtitle": "משפט משלים שמסביר למה כדאי לקנות אצלכם",
+    "cta": "לצפייה במוצרים",
+    "image": ""
+  },
+  "products": [
+    {
+      "name": "מוצר ראשון",
+      "price": 99,
+      "oldPrice": 129,
+      "badge": "מבצע",
+      "emoji": "🎁",
+      "category": "קטגוריה א",
+      "description": "תיאור המוצר. אפשר לכתוב כמה שורות."
+    },
+    {
+      "name": "מוצר עם בחירה (מידה / צבע)",
+      "price": 149,
+      "emoji": "📦",
+      "category": "קטגוריה ב",
+      "options": [
+        "קטן",
+        "בינוני",
+        "גדול"
+      ],
+      "optionLabel": "מידה",
+      "description": "מוצר שמאפשר ללקוח לבחור אפשרות לפני ההוספה לעגלה."
+    }
+  ],
+  "shipping": {
+    "price": 30,
+    "freeOver": 300
+  },
+  "checkout": "whatsapp",
+  "askAddress": true,
+  "features": [
+    {
+      "icon": "🚚",
+      "title": "משלוח מהיר",
+      "text": "עד 3 ימי עסקים"
+    },
+    {
+      "icon": "🔒",
+      "title": "רכישה בטוחה",
+      "text": "שירות אישי ותשלום מאובטח"
+    },
+    {
+      "icon": "↩️",
+      "title": "החזרה קלה",
+      "text": "14 יום להחזרה"
+    }
+  ],
+  "about": {
+    "title": "קצת עלינו",
+    "text": "כאן כותבים את הסיפור של העסק."
+  },
+  "faq": [
+    {
+      "q": "כמה זמן לוקח משלוח?",
+      "a": "בדרך כלל 2-3 ימי עסקים."
+    },
+    {
+      "q": "איך משלמים?",
+      "a": "אחרי ההזמנה ניצור קשר ונשלח קישור לתשלום."
+    }
+  ],
+  "contact": {
+    "whatsapp": "972501234567",
+    "phone": "050-1234567",
+    "email": "hello@example.com",
+    "instagram": "",
+    "address": ""
+  },
+  "tranzilaTerminal": "",
+  "secureHandshake": false
+}

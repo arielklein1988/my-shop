@@ -1,0 +1,130 @@
+{
+  "id": "glow-beauty",
+  "name": "Glow",
+  "logo": "✨",
+  "tagline": "טיפוח טבעי לעור זוהר",
+  "description": "מוצרי טיפוח טבעיים לפנים ולגוף, מיוצרים בישראל",
+  "lang": "he",
+  "dir": "rtl",
+  "locale": "he-IL",
+  "currency": "ILS",
+  "theme": {
+    "font": "Heebo",
+    "bg": "#fff8f9",
+    "text": "#3a2230",
+    "muted": "#8a6f7d",
+    "card": "#ffffff",
+    "border": "#f3dde4",
+    "primary": "#be185d",
+    "primaryText": "#ffffff",
+    "accent": "#e879a8",
+    "radius": "20px",
+    "heroBg": "linear-gradient(135deg,#f9a8c9,#be185d)"
+  },
+  "hero": {
+    "title": "העור שלך מגיע לו מתנה",
+    "subtitle": "קרמים, סרומים ושמנים טבעיים - בלי חומרים מיותרים",
+    "cta": "לחנות"
+  },
+  "products": [
+    {
+      "name": "סרום ויטמין C",
+      "price": 119,
+      "badge": "רב מכר",
+      "emoji": "🧴",
+      "color": "#fde7ef",
+      "category": "פנים",
+      "description": "סרום מבהיר ומחזק עם ויטמין C ו-E. 30 מ״ל."
+    },
+    {
+      "name": "קרם לחות עשיר",
+      "price": 99,
+      "emoji": "🫙",
+      "color": "#fdeee3",
+      "category": "פנים",
+      "description": "לחות עמוקה ל-24 שעות. מתאים לעור יבש ורגיש."
+    },
+    {
+      "name": "שמן גוף מרגיע",
+      "price": 79,
+      "oldPrice": 99,
+      "badge": "מבצע",
+      "emoji": "🌸",
+      "color": "#f8e3f4",
+      "category": "גוף",
+      "description": "שמן שקדים ולבנדר, נספג מהר ולא משאיר שכבה שמנונית."
+    },
+    {
+      "name": "מסכת חימר מטהרת",
+      "price": 69,
+      "emoji": "🧖‍♀️",
+      "color": "#e8efe3",
+      "category": "פנים",
+      "description": "מסכת חימר ירוק לניקוי עמוק של הנקבוביות."
+    },
+    {
+      "name": "פילינג גוף קפה",
+      "price": 59,
+      "emoji": "☕",
+      "color": "#efe2d6",
+      "category": "גוף",
+      "description": "פילינג קפה וסוכר שמחליק ומעורר את העור."
+    },
+    {
+      "name": "סט מתנה מפנק",
+      "price": 229,
+      "oldPrice": 289,
+      "badge": "מתנה",
+      "emoji": "🎁",
+      "color": "#fde7ef",
+      "category": "מארזים",
+      "description": "מארז עם סרום, קרם ושמן גוף באריזת מתנה."
+    }
+  ],
+  "shipping": {
+    "price": 25,
+    "freeOver": 200
+  },
+  "checkout": "whatsapp",
+  "askAddress": true,
+  "features": [
+    {
+      "icon": "🌿",
+      "title": "מרכיבים טבעיים",
+      "text": "בלי פרבנים ובלי חומרים מיותרים"
+    },
+    {
+      "icon": "🐰",
+      "title": "ללא ניסויים בבעלי חיים",
+      "text": "תמיד"
+    },
+    {
+      "icon": "🎀",
+      "title": "אריזת מתנה",
+      "text": "בלחיצה אחת, בלי תוספת"
+    }
+  ],
+  "about": {
+    "title": "על Glow",
+    "text": "התחלנו במטבח הבית, בחיפוש אחר קרם שבאמת עובד.\nהיום אנחנו מייצרים בקבוצות קטנות, כדי שכל מוצר יגיע אליכם טרי."
+  },
+  "faq": [
+    {
+      "q": "המוצרים מתאימים לעור רגיש?",
+      "a": "כן, הם נבדקו דרמטולוגית. מומלץ לעשות בדיקת רגישות קטנה."
+    },
+    {
+      "q": "מה אורך חיי המדף?",
+      "a": "שנה סגור, ו-6 חודשים לאחר פתיחה."
+    }
+  ],
+  "contact": {
+    "whatsapp": "972501234567",
+    "phone": "050-1234567",
+    "email": "hello@example.com",
+    "instagram": "glow.beauty",
+    "address": ""
+  },
+  "tranzilaTerminal": "",
+  "secureHandshake": false
+}

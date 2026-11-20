@@ -1,0 +1,146 @@
+{
+  "id": "techbox",
+  "name": "TechBox",
+  "logo": "⚡",
+  "tagline": "גאדג'טים שעושים את החיים קלים",
+  "description": "אוזניות, שעונים חכמים ואביזרי סמארטפון במחירים משתלמים",
+  "lang": "he",
+  "dir": "rtl",
+  "locale": "he-IL",
+  "currency": "ILS",
+  "theme": {
+    "font": "Heebo",
+    "bg": "#0b1020",
+    "text": "#e8ecf8",
+    "muted": "#9aa6c4",
+    "card": "#141b34",
+    "border": "#232d52",
+    "primary": "#4f8cff",
+    "primaryText": "#ffffff",
+    "accent": "#22d3ee",
+    "radius": "16px",
+    "heroBg": "linear-gradient(135deg,#1e3a8a,#0891b2)"
+  },
+  "hero": {
+    "title": "הטכנולוגיה שחיכית לה",
+    "subtitle": "מוצרים נבחרים, אחריות מלאה ומשלוח מהיר עד הדלת",
+    "cta": "לכל המוצרים"
+  },
+  "products": [
+    {
+      "name": "אוזניות אלחוטיות Pro",
+      "price": 249,
+      "oldPrice": 349,
+      "badge": "מבצע",
+      "emoji": "🎧",
+      "color": "#1b2547",
+      "category": "שמע",
+      "options": [
+        "שחור",
+        "לבן"
+      ],
+      "optionLabel": "צבע",
+      "description": "ביטול רעשים אקטיבי, 30 שעות סוללה וחיבור Bluetooth 5.3."
+    },
+    {
+      "name": "שעון חכם Fit",
+      "price": 329,
+      "emoji": "⌚",
+      "color": "#1b2547",
+      "category": "לבישים",
+      "options": [
+        "שחור",
+        "כסף",
+        "ורוד"
+      ],
+      "optionLabel": "צבע",
+      "description": "מדידת דופק, שינה וספורט. עמיד במים, סוללה לשבוע."
+    },
+    {
+      "name": "מטען מהיר 65W",
+      "price": 89,
+      "emoji": "🔌",
+      "color": "#1b2547",
+      "category": "אביזרים",
+      "description": "מטען GaN קטן וחזק עם שני חיבורי USB-C."
+    },
+    {
+      "name": "רמקול נייד עמיד מים",
+      "price": 159,
+      "badge": "חדש",
+      "emoji": "🔊",
+      "color": "#1b2547",
+      "category": "שמע",
+      "description": "צליל עוצמתי, 12 שעות ניגון ועמידות IP67."
+    },
+    {
+      "name": "כיסוי מגן לטלפון",
+      "price": 59,
+      "emoji": "📱",
+      "color": "#1b2547",
+      "category": "אביזרים",
+      "options": [
+        "iPhone 15",
+        "iPhone 16",
+        "Galaxy S24",
+        "Galaxy S25"
+      ],
+      "optionLabel": "דגם",
+      "description": "כיסוי שקוף עמיד בנפילות, תומך בטעינה אלחוטית."
+    },
+    {
+      "name": "מקלדת מכנית אלחוטית",
+      "price": 279,
+      "emoji": "⌨️",
+      "color": "#1b2547",
+      "category": "מחשב",
+      "description": "מתגים שקטים, תאורת RGB וחיבור לשלושה מכשירים."
+    }
+  ],
+  "shipping": {
+    "price": 25,
+    "freeOver": 250
+  },
+  "checkout": "whatsapp",
+  "askAddress": true,
+  "features": [
+    {
+      "icon": "🛡️",
+      "title": "אחריות שנה",
+      "text": "על כל המוצרים"
+    },
+    {
+      "icon": "⚡",
+      "title": "משלוח מהיר",
+      "text": "1-3 ימי עסקים"
+    },
+    {
+      "icon": "🔧",
+      "title": "תמיכה טכנית",
+      "text": "בעברית ובוואטסאפ"
+    }
+  ],
+  "about": {
+    "title": "מי אנחנו",
+    "text": "אנחנו בודקים כל מוצר לפני שהוא נכנס לחנות, ומוכרים רק מה שהיינו קונים בעצמנו."
+  },
+  "faq": [
+    {
+      "q": "יש אחריות?",
+      "a": "כן, אחריות יבואן של שנה על כל המוצרים."
+    },
+    {
+      "q": "אפשר להחזיר?",
+      "a": "עד 14 יום מקבלת המוצר, באריזה המקורית."
+    }
+  ],
+  "contact": {
+    "whatsapp": "972501234567",
+    "phone": "050-1234567",
+    "email": "support@example.com",
+    "instagram": "",
+    "address": ""
+  },
+  "tranzilaTerminal": "",
+  "secureHandshake": false
+}

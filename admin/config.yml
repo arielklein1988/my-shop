@@ -1,0 +1,166 @@
+# הגדרות פאנל הניהול (Decap CMS)
+# חובה לשנות את repo לשם המאגר שלכם ב-GitHub, בפורמט: שם-משתמש/שם-מאגר
+
+backend:
+  name: github
+  repo: YOUR-GITHUB-USER/YOUR-REPO   # <-- לשנות
+  branch: main
+
+locale: he
+publish_mode: simple
+media_folder: images
+public_folder: /images
+site_url: /
+display_url: /
+
+collections:
+  - name: shop
+    label: החנות
+    files:
+      - name: site
+        label: כל תוכן האתר
+        file: data/site.json
+        fields:
+          # ---------- פרטי העסק ----------
+          - { label: "שם החנות", name: name, widget: string }
+          - { label: "לוגו (אימוג'י או טקסט קצר)", name: logo, widget: string, required: false }
+          - { label: "משפט קצר על העסק (מופיע בכותרת הדפדפן)", name: tagline, widget: string, required: false }
+          - { label: "תיאור לגוגל", name: description, widget: text, required: false }
+          - { label: "מזהה קצר באנגלית (אל תשנו אחרי שהחנות פעילה)", name: id, widget: string, hint: "לדוגמה my-shop" }
+          - { label: "מטבע", name: currency, widget: select, options: [{ label: "שקל ₪", value: ILS }, { label: "דולר $", value: USD }, { label: "יורו €", value: EUR }, { label: "לירה שטרלינג £", value: GBP }], default: ILS }
+          - { label: "שפה", name: lang, widget: select, options: [{ label: "עברית", value: he }, { label: "English", value: en }], default: he }
+          - { label: "כיוון", name: dir, widget: select, options: [{ label: "מימין לשמאל (עברית)", value: rtl }, { label: "משמאל לימין (אנגלית)", value: ltr }], default: rtl }
+          - { label: "פורמט מספרים", name: locale, widget: string, default: he-IL, hint: "he-IL לעברית, en-US לאנגלית" }
+
+          # ---------- הזמנות ותשלום ----------
+          - label: "איך מתקבלות הזמנות"
+            name: checkout
+            widget: select
+            options:
+              - { label: "וואטסאפ (הודעה מוכנה לבעל החנות)", value: whatsapp }
+              - { label: "טופס הזמנה (נשמר ב-Netlify Forms)", value: form }
+              - { label: "תשלום באשראי דרך טרנזילה", value: tranzila }
+            default: whatsapp
+          - { label: "שם מסוף טרנזילה (רק לתשלום בטרנזילה)", name: tranzilaTerminal, widget: string, required: false }
+          - { label: "נעילת סכום מאובטחת מול טרנזילה (Handshake)", name: secureHandshake, widget: boolean, default: false, hint: "דורש מודול Token בטרנזילה ומשתני סביבה ב-Netlify. ראו README." }
+          - { label: "לבקש כתובת משלוח (לא רלוונטי בתשלום בטרנזילה)", name: askAddress, widget: boolean, default: true }
+          - label: "משלוח"
+            name: shipping
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { label: "עלות משלוח", name: price, widget: number, value_type: float, min: 0 }
+              - { label: "משלוח חינם מעל סכום", name: freeOver, widget: number, value_type: float, min: 0, required: false }
+
+          # ---------- עיצוב ----------
+          - label: "עיצוב וצבעים"
+            name: theme
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "פונט (שם מ-Google Fonts)", name: font, widget: string, default: Heebo }
+              - { label: "צבע רקע", name: bg, widget: color, allowInput: true }
+              - { label: "צבע טקסט", name: text, widget: color, allowInput: true }
+              - { label: "צבע טקסט משני", name: muted, widget: color, allowInput: true }
+              - { label: "רקע כרטיסים", name: card, widget: color, allowInput: true }
+              - { label: "צבע קווים", name: border, widget: color, allowInput: true }
+              - { label: "צבע ראשי (כפתורים)", name: primary, widget: color, allowInput: true }
+              - { label: "צבע טקסט על הצבע הראשי", name: primaryText, widget: color, allowInput: true }
+              - { label: "צבע הדגשה (תגיות ומונה עגלה)", name: accent, widget: color, allowInput: true }
+              - { label: "עיגול פינות", name: radius, widget: string, default: 14px }
+              - { label: "רקע הפתיח (CSS, לא חובה)", name: heroBg, widget: string, required: false, hint: "לדוגמה linear-gradient(135deg,#111,#e11d48)" }
+              - { label: "צבע טקסט בפתיח", name: heroText, widget: color, allowInput: true, required: false }
+
+          # ---------- פתיח ----------
+          - label: "פתיח (החלק העליון)"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "כותרת", name: title, widget: string }
+              - { label: "משפט משלים", name: subtitle, widget: text, required: false }
+              - { label: "טקסט הכפתור", name: cta, widget: string, required: false }
+              - { label: "תמונת רקע (לא חובה)", name: image, widget: image, required: false }
+
+          # ---------- מוצרים ----------
+          - label: "מוצרים"
+            name: products
+            widget: list
+            label_singular: מוצר
+            summary: "{{fields.name}} - {{fields.price}}"
+            collapsed: true
+            fields:
+              - { label: "שם המוצר", name: name, widget: string }
+              - { label: "מחיר", name: price, widget: number, value_type: float, min: 0 }
+              - { label: "מחיר לפני הנחה (לא חובה)", name: oldPrice, widget: number, value_type: float, min: 0, required: false }
+              - { label: "תמונה", name: image, widget: image, required: false, hint: "בלי תמונה יוצג האימוג'י על רקע צבעוני" }
+              - { label: "אימוג'י (כשאין תמונה)", name: emoji, widget: string, required: false }
+              - { label: "צבע רקע (כשאין תמונה)", name: color, widget: color, allowInput: true, required: false }
+              - { label: "קטגוריה", name: category, widget: string, required: false }
+              - { label: "תגית (למשל: מבצע, חדש)", name: badge, widget: string, required: false }
+              - { label: "תיאור", name: description, widget: text, required: false }
+              - { label: "שם הבחירה (מידה, צבע...)", name: optionLabel, widget: string, required: false }
+              - { label: "אפשרויות לבחירה", name: options, widget: list, field: { label: "אפשרות", name: option, widget: string }, required: false }
+
+          # ---------- יתרונות / אודות / שאלות ----------
+          - label: "יתרונות (שלוש תיבות מתחת למוצרים)"
+            name: features
+            widget: list
+            label_singular: יתרון
+            required: false
+            collapsed: true
+            fields:
+              - { label: "אייקון (אימוג'י)", name: icon, widget: string }
+              - { label: "כותרת", name: title, widget: string }
+              - { label: "טקסט", name: text, widget: string }
+          - label: "אודות"
+            name: about
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { label: "כותרת", name: title, widget: string }
+              - { label: "טקסט", name: text, widget: text }
+          - label: "שאלות נפוצות"
+            name: faq
+            widget: list
+            label_singular: שאלה
+            required: false
+            collapsed: true
+            summary: "{{fields.q}}"
+            fields:
+              - { label: "שאלה", name: q, widget: string }
+              - { label: "תשובה", name: a, widget: text }
+
+          # ---------- יצירת קשר וקישורים ----------
+          - label: "יצירת קשר וקישורים"
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "וואטסאפ (בינלאומי, בלי + ובלי 0 בהתחלה)", name: whatsapp, widget: string, required: false, hint: "לדוגמה 972501234567" }
+              - { label: "טלפון", name: phone, widget: string, required: false }
+              - { label: "אימייל", name: email, widget: string, required: false }
+              - { label: "אינסטגרם (שם משתמש בלבד)", name: instagram, widget: string, required: false }
+              - { label: "כתובת", name: address, widget: string, required: false }
+
+          # ---------- טקסטים של הממשק ----------
+          - label: "טקסטים בממשק (כפתורים והודעות)"
+            name: ui
+            widget: object
+            required: false
+            collapsed: true
+            fields:
+              - { label: "כותרת אזור המוצרים", name: products, widget: string, required: false }
+              - { label: "כפתור הוספה לעגלה", name: add, widget: string, required: false }
+              - { label: "הודעה אחרי הוספה", name: added, widget: string, required: false }
+              - { label: "כותרת העגלה", name: cart, widget: string, required: false }
+              - { label: "עגלה ריקה", name: empty, widget: string, required: false }
+              - { label: "כפתור המשך להזמנה", name: checkout, widget: string, required: false }
+              - { label: "כפתור שליחת הזמנה", name: send, widget: string, required: false }
+              - { label: "כפתור מעבר לתשלום", name: pay, widget: string, required: false }
+              - { label: "הערה מתחת לכפתור התשלום", name: payNote, widget: string, required: false }
+              - { label: "כותרת תודה", name: thanksTitle, widget: string, required: false }
+              - { label: "טקסט תודה", name: thanksText, widget: string, required: false }
+              - { label: "פתיח הודעת הוואטסאפ", name: waHello, widget: string, required: false }

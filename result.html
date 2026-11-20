@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>תוצאת התשלום</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="wrap" style="min-height:100vh;display:grid;place-items:center;text-align:center">
+    <div>
+      <div id="icon" style="font-size:4rem"></div>
+      <h1 id="title" style="margin:8px 0"></h1>
+      <p id="text" style="color:var(--muted);margin-bottom:22px"></p>
+      <a class="btn auto" href="/">חזרה לחנות</a>
+    </div>
+  </main>
+  <script>
+    // דף זה מציג הודעה בלבד. אישור התשלום האמיתי נמצא בפאנל של טרנזילה (MY.TRANZILA).
+    (function () {
+      var q = new URLSearchParams(location.search);
+      var ok = q.get("status") === "ok";
+      document.getElementById("icon").textContent = ok ? "✅" : "⚠️";
+      document.getElementById("title").textContent = ok ? "תודה! התשלום התקבל" : "התשלום לא הושלם";
+      document.getElementById("text").textContent = ok
+        ? "ההזמנה התקבלה ונחזור אליך בהקדם עם פרטי המשלוח."
+        : "לא בוצע חיוב. אפשר לחזור לחנות ולנסות שוב, או ליצור איתנו קשר.";
+      if (ok) { try { localStorage.removeItem("cart-" + (q.get("cid") || "shop")); } catch (e) {} }
+      fetch("data/site.json").then(function (r) { return r.json(); }).then(function (S) {
+        var t = S.theme || {}, r = document.documentElement;
+        var m = { bg: "--bg", text: "--text", muted: "--muted", primary: "--primary", primaryText: "--primary-text", accent: "--accent", radius: "--radius" };
+        Object.keys(m).forEach(function (k) { if (t[k]) r.style.setProperty(m[k], t[k]); });
+        if (t.font) r.style.setProperty("--font", '"' + t.font + '", system-ui, sans-serif');
+        r.dir = S.dir || "rtl"; r.lang = S.lang || "he";
+        document.title = (S.name || "") + " | " + document.title;
+      }).catch(function () {});
+    })();
+  </script>
+</body>
+</html>
