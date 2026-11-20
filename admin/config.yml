@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: YOUR-GITHUB-USER/YOUR-REPO   # <-- לשנות
+  repo: arielklein1988/my-shop
   branch: main
 
 locale: he
